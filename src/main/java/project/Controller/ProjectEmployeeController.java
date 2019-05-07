@@ -1,8 +1,10 @@
 package project.Controller;
 
+import com.sun.org.apache.xml.internal.resolver.helpers.Debug;
 import org.slf4j.LoggerFactory;
 import project.DTO.EmployeeDTO;
 import project.DTO.ProjectDTO;
+import project.Model.Employee;
 import project.Model.Project;
 import project.Model.ProjectEmployee;
 import project.Repository.ProjectEmployeeRepository;
@@ -16,16 +18,17 @@ import project.Repository.ProjectRepository;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Controller
 @RequestMapping(path="/project")
-public class ProjectController {
+public class ProjectEmployeeController {
     @Autowired
     ProjectEmployeeRepository projectEmployeeRepository;
     @Autowired
     ProjectRepository projectRepository;
 
-   org.slf4j.Logger logger = LoggerFactory.getLogger(ProjectController.class);
+   org.slf4j.Logger logger = LoggerFactory.getLogger(ProjectEmployeeController.class);
 
     @CrossOrigin
     @ResponseBody
