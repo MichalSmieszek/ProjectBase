@@ -30,7 +30,7 @@ public class ProjectEmployeeController {
 
    org.slf4j.Logger logger = LoggerFactory.getLogger(ProjectEmployeeController.class);
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:8080")
     @ResponseBody
     @GetMapping
     public List<ProjectDTO> getProjectsAndEmployees() {
@@ -47,7 +47,7 @@ public class ProjectEmployeeController {
             finalList.add(projectDTO);
         }
 
-        return(finalList);
+        return finalList;
     }
 
 

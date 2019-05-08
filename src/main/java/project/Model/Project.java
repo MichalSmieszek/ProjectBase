@@ -13,6 +13,11 @@ public class Project {
     Date startDate;
     Date endDate;
 
+    public Project(Date startDate, Date endDate){
+        this.startDate=startDate;
+        this.endDate=endDate;
+    }
+
     public int getId() {
         return id;
     }

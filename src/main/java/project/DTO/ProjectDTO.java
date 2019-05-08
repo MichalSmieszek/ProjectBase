@@ -19,7 +19,13 @@ public class ProjectDTO {
     public ProjectDTO(Project project, List<EmployeeDTO> employeeDTO){
         projectName=project.getName();
         startDate=project.getStartDate();
-        endDate=project.getEndDate();
+        // startDate can't be after endDate
+        if (startDate.after(getEndDate()))
+            endDate=project.getStartDate();
+            else
+            endDate=project.getEndDate();
+
+
         employeeList=employeeDTO;
 
     }
